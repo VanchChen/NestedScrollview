@@ -7,32 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D67E9B1520C512C200AD7D23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D67E9B1420C512C200AD7D23 /* AppDelegate.m */; };
-		D67E9B1820C512C200AD7D23 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D67E9B1720C512C200AD7D23 /* ViewController.m */; };
-		D67E9B1B20C512C200AD7D23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D67E9B1920C512C200AD7D23 /* Main.storyboard */; };
-		D67E9B1D20C512C500AD7D23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D67E9B1C20C512C500AD7D23 /* Assets.xcassets */; };
-		D67E9B2020C512C500AD7D23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D67E9B1E20C512C500AD7D23 /* LaunchScreen.storyboard */; };
-		D67E9B2320C512C500AD7D23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D67E9B2220C512C500AD7D23 /* main.m */; };
-		D67E9B2B20C515FB00AD7D23 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D67E9B2A20C515FB00AD7D23 /* HeaderView.m */; };
+		D62536A621BA695D0014E5EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62536A521BA695D0014E5EF /* AppDelegate.swift */; };
+		D62536AB21BA695D0014E5EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D62536A921BA695D0014E5EF /* Main.storyboard */; };
+		D62536AD21BA695F0014E5EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D62536AC21BA695F0014E5EF /* Assets.xcassets */; };
+		D62536B021BA695F0014E5EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D62536AE21BA695F0014E5EF /* LaunchScreen.storyboard */; };
+		D62536B821BA6D860014E5EF /* FeudalismViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62536B721BA6D860014E5EF /* FeudalismViewController.swift */; };
+		D62536BA21BA6DB40014E5EF /* ColonialismViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62536B921BA6DB40014E5EF /* ColonialismViewController.swift */; };
+		D62536BC21BA6DF30014E5EF /* DespotismViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62536BB21BA6DF30014E5EF /* DespotismViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D67E9B1020C512C200AD7D23 /* TableViewInScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewInScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D67E9B1320C512C200AD7D23 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D67E9B1420C512C200AD7D23 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D67E9B1620C512C200AD7D23 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D67E9B1720C512C200AD7D23 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D67E9B1A20C512C200AD7D23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D67E9B1C20C512C500AD7D23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D67E9B1F20C512C500AD7D23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D67E9B2120C512C500AD7D23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D67E9B2220C512C500AD7D23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D67E9B2920C515FB00AD7D23 /* HeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
-		D67E9B2A20C515FB00AD7D23 /* HeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		D62536A221BA695D0014E5EF /* NestedScrollview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NestedScrollview.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D62536A521BA695D0014E5EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D62536AA21BA695D0014E5EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D62536AC21BA695F0014E5EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D62536AF21BA695F0014E5EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D62536B121BA695F0014E5EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D62536B721BA6D860014E5EF /* FeudalismViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeudalismViewController.swift; sourceTree = "<group>"; };
+		D62536B921BA6DB40014E5EF /* ColonialismViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColonialismViewController.swift; sourceTree = "<group>"; };
+		D62536BB21BA6DF30014E5EF /* DespotismViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DespotismViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D67E9B0D20C512C200AD7D23 /* Frameworks */ = {
+		D625369F21BA695D0014E5EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,75 +39,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D67E9B0720C512C200AD7D23 = {
+		D625369921BA695D0014E5EF = {
 			isa = PBXGroup;
 			children = (
-				D67E9B1220C512C200AD7D23 /* TableViewInScrollView */,
-				D67E9B1120C512C200AD7D23 /* Products */,
+				D62536A421BA695D0014E5EF /* NestedScrollview */,
+				D62536A321BA695D0014E5EF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D67E9B1120C512C200AD7D23 /* Products */ = {
+		D62536A321BA695D0014E5EF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D67E9B1020C512C200AD7D23 /* TableViewInScrollView.app */,
+				D62536A221BA695D0014E5EF /* NestedScrollview.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D67E9B1220C512C200AD7D23 /* TableViewInScrollView */ = {
+		D62536A421BA695D0014E5EF /* NestedScrollview */ = {
 			isa = PBXGroup;
 			children = (
-				D67E9B1320C512C200AD7D23 /* AppDelegate.h */,
-				D67E9B1420C512C200AD7D23 /* AppDelegate.m */,
-				D67E9B1620C512C200AD7D23 /* ViewController.h */,
-				D67E9B1720C512C200AD7D23 /* ViewController.m */,
-				D67E9B1920C512C200AD7D23 /* Main.storyboard */,
-				D67E9B1C20C512C500AD7D23 /* Assets.xcassets */,
-				D67E9B1E20C512C500AD7D23 /* LaunchScreen.storyboard */,
-				D67E9B2120C512C500AD7D23 /* Info.plist */,
-				D67E9B2220C512C500AD7D23 /* main.m */,
-				D67E9B2920C515FB00AD7D23 /* HeaderView.h */,
-				D67E9B2A20C515FB00AD7D23 /* HeaderView.m */,
+				D62536A521BA695D0014E5EF /* AppDelegate.swift */,
+				D62536A921BA695D0014E5EF /* Main.storyboard */,
+				D62536AC21BA695F0014E5EF /* Assets.xcassets */,
+				D62536AE21BA695F0014E5EF /* LaunchScreen.storyboard */,
+				D62536B121BA695F0014E5EF /* Info.plist */,
+				D62536B721BA6D860014E5EF /* FeudalismViewController.swift */,
+				D62536B921BA6DB40014E5EF /* ColonialismViewController.swift */,
+				D62536BB21BA6DF30014E5EF /* DespotismViewController.swift */,
 			);
-			path = TableViewInScrollView;
+			path = NestedScrollview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D67E9B0F20C512C200AD7D23 /* TableViewInScrollView */ = {
+		D62536A121BA695D0014E5EF /* NestedScrollview */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D67E9B2620C512C500AD7D23 /* Build configuration list for PBXNativeTarget "TableViewInScrollView" */;
+			buildConfigurationList = D62536B421BA695F0014E5EF /* Build configuration list for PBXNativeTarget "NestedScrollview" */;
 			buildPhases = (
-				D67E9B0C20C512C200AD7D23 /* Sources */,
-				D67E9B0D20C512C200AD7D23 /* Frameworks */,
-				D67E9B0E20C512C200AD7D23 /* Resources */,
+				D625369E21BA695D0014E5EF /* Sources */,
+				D625369F21BA695D0014E5EF /* Frameworks */,
+				D62536A021BA695D0014E5EF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TableViewInScrollView;
-			productName = TableViewInScrollView;
-			productReference = D67E9B1020C512C200AD7D23 /* TableViewInScrollView.app */;
+			name = NestedScrollview;
+			productName = NestedScrollview;
+			productReference = D62536A221BA695D0014E5EF /* NestedScrollview.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D67E9B0820C512C200AD7D23 /* Project object */ = {
+		D625369A21BA695D0014E5EF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = vanch;
 				TargetAttributes = {
-					D67E9B0F20C512C200AD7D23 = {
+					D62536A121BA695D0014E5EF = {
 						CreatedOnToolsVersion = 9.3;
 					};
 				};
 			};
-			buildConfigurationList = D67E9B0B20C512C200AD7D23 /* Build configuration list for PBXProject "TableViewInScrollView" */;
+			buildConfigurationList = D625369D21BA695D0014E5EF /* Build configuration list for PBXProject "NestedScrollview" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,56 +113,56 @@
 				en,
 				Base,
 			);
-			mainGroup = D67E9B0720C512C200AD7D23;
-			productRefGroup = D67E9B1120C512C200AD7D23 /* Products */;
+			mainGroup = D625369921BA695D0014E5EF;
+			productRefGroup = D62536A321BA695D0014E5EF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D67E9B0F20C512C200AD7D23 /* TableViewInScrollView */,
+				D62536A121BA695D0014E5EF /* NestedScrollview */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D67E9B0E20C512C200AD7D23 /* Resources */ = {
+		D62536A021BA695D0014E5EF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D67E9B2020C512C500AD7D23 /* LaunchScreen.storyboard in Resources */,
-				D67E9B1D20C512C500AD7D23 /* Assets.xcassets in Resources */,
-				D67E9B1B20C512C200AD7D23 /* Main.storyboard in Resources */,
+				D62536B021BA695F0014E5EF /* LaunchScreen.storyboard in Resources */,
+				D62536AD21BA695F0014E5EF /* Assets.xcassets in Resources */,
+				D62536AB21BA695D0014E5EF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D67E9B0C20C512C200AD7D23 /* Sources */ = {
+		D625369E21BA695D0014E5EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D67E9B1820C512C200AD7D23 /* ViewController.m in Sources */,
-				D67E9B2320C512C500AD7D23 /* main.m in Sources */,
-				D67E9B2B20C515FB00AD7D23 /* HeaderView.m in Sources */,
-				D67E9B1520C512C200AD7D23 /* AppDelegate.m in Sources */,
+				D62536BA21BA6DB40014E5EF /* ColonialismViewController.swift in Sources */,
+				D62536A621BA695D0014E5EF /* AppDelegate.swift in Sources */,
+				D62536B821BA6D860014E5EF /* FeudalismViewController.swift in Sources */,
+				D62536BC21BA6DF30014E5EF /* DespotismViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D67E9B1920C512C200AD7D23 /* Main.storyboard */ = {
+		D62536A921BA695D0014E5EF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D67E9B1A20C512C200AD7D23 /* Base */,
+				D62536AA21BA695D0014E5EF /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		D67E9B1E20C512C500AD7D23 /* LaunchScreen.storyboard */ = {
+		D62536AE21BA695F0014E5EF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D67E9B1F20C512C500AD7D23 /* Base */,
+				D62536AF21BA695F0014E5EF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -175,7 +170,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D67E9B2420C512C500AD7D23 /* Debug */ = {
+		D62536B221BA695F0014E5EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -230,10 +225,12 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		D67E9B2520C512C500AD7D23 /* Release */ = {
+		D62536B321BA695F0014E5EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -281,40 +278,44 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		D67E9B2720C512C500AD7D23 /* Debug */ = {
+		D62536B521BA695F0014E5EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N95PFH5E8A;
-				INFOPLIST_FILE = TableViewInScrollView/Info.plist;
+				INFOPLIST_FILE = NestedScrollview/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vanch.TableViewInScrollView;
+				PRODUCT_BUNDLE_IDENTIFIER = vanch.NestedScrollview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		D67E9B2820C512C500AD7D23 /* Release */ = {
+		D62536B621BA695F0014E5EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N95PFH5E8A;
-				INFOPLIST_FILE = TableViewInScrollView/Info.plist;
+				INFOPLIST_FILE = NestedScrollview/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vanch.TableViewInScrollView;
+				PRODUCT_BUNDLE_IDENTIFIER = vanch.NestedScrollview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -322,25 +323,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D67E9B0B20C512C200AD7D23 /* Build configuration list for PBXProject "TableViewInScrollView" */ = {
+		D625369D21BA695D0014E5EF /* Build configuration list for PBXProject "NestedScrollview" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D67E9B2420C512C500AD7D23 /* Debug */,
-				D67E9B2520C512C500AD7D23 /* Release */,
+				D62536B221BA695F0014E5EF /* Debug */,
+				D62536B321BA695F0014E5EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D67E9B2620C512C500AD7D23 /* Build configuration list for PBXNativeTarget "TableViewInScrollView" */ = {
+		D62536B421BA695F0014E5EF /* Build configuration list for PBXNativeTarget "NestedScrollview" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D67E9B2720C512C500AD7D23 /* Debug */,
-				D67E9B2820C512C500AD7D23 /* Release */,
+				D62536B521BA695F0014E5EF /* Debug */,
+				D62536B621BA695F0014E5EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D67E9B0820C512C200AD7D23 /* Project object */;
+	rootObject = D625369A21BA695D0014E5EF /* Project object */;
 }
