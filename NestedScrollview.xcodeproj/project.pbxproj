@@ -14,6 +14,9 @@
 		D62536B821BA6D860014E5EF /* FeudalismViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62536B721BA6D860014E5EF /* FeudalismViewController.swift */; };
 		D62536BA21BA6DB40014E5EF /* ColonialismViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62536B921BA6DB40014E5EF /* ColonialismViewController.swift */; };
 		D62536BC21BA6DF30014E5EF /* DespotismViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62536BB21BA6DF30014E5EF /* DespotismViewController.swift */; };
+		D6459C7D21BE0F7900276A78 /* NSTTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6459C7C21BE0F7900276A78 /* NSTTableViewController.swift */; };
+		D6459C7F21BE1AE200276A78 /* NSTWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6459C7E21BE1AE200276A78 /* NSTWebViewController.swift */; };
+		D6459C8121BE347A00276A78 /* NSTSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6459C8021BE347A00276A78 /* NSTSegmentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		D62536B721BA6D860014E5EF /* FeudalismViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeudalismViewController.swift; sourceTree = "<group>"; };
 		D62536B921BA6DB40014E5EF /* ColonialismViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColonialismViewController.swift; sourceTree = "<group>"; };
 		D62536BB21BA6DF30014E5EF /* DespotismViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DespotismViewController.swift; sourceTree = "<group>"; };
+		D6459C7C21BE0F7900276A78 /* NSTTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NSTTableViewController.swift; path = Components/NSTTableViewController.swift; sourceTree = "<group>"; };
+		D6459C7E21BE1AE200276A78 /* NSTWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NSTWebViewController.swift; path = Components/NSTWebViewController.swift; sourceTree = "<group>"; };
+		D6459C8021BE347A00276A78 /* NSTSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NSTSegmentView.swift; path = Components/NSTSegmentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				D62536B721BA6D860014E5EF /* FeudalismViewController.swift */,
 				D62536B921BA6DB40014E5EF /* ColonialismViewController.swift */,
 				D62536BB21BA6DF30014E5EF /* DespotismViewController.swift */,
+				D6459C7C21BE0F7900276A78 /* NSTTableViewController.swift */,
+				D6459C7E21BE1AE200276A78 /* NSTWebViewController.swift */,
+				D6459C8021BE347A00276A78 /* NSTSegmentView.swift */,
 			);
 			path = NestedScrollview;
 			sourceTree = "<group>";
@@ -142,9 +151,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D62536BA21BA6DB40014E5EF /* ColonialismViewController.swift in Sources */,
+				D6459C8121BE347A00276A78 /* NSTSegmentView.swift in Sources */,
+				D6459C7F21BE1AE200276A78 /* NSTWebViewController.swift in Sources */,
 				D62536A621BA695D0014E5EF /* AppDelegate.swift in Sources */,
 				D62536B821BA6D860014E5EF /* FeudalismViewController.swift in Sources */,
 				D62536BC21BA6DF30014E5EF /* DespotismViewController.swift in Sources */,
+				D6459C7D21BE0F7900276A78 /* NSTTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
