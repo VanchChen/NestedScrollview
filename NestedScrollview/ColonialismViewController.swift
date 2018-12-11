@@ -63,6 +63,8 @@ class ColonialismViewController: UIViewController {
             currentScrollView!.removeFromSuperview()
             
             //Remove KVO
+            observer?.invalidate()
+            observer = nil
         }
         
         scrollView.contentInset = UIEdgeInsetsMake(244, 0, 0, 0)
