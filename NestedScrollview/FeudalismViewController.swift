@@ -32,6 +32,13 @@ class FeudalismViewController: UIViewController, UITableViewDelegate, UITableVie
             guard let strongSelf = self else {
                 return
             }
+            
+            if segmentView.selectedIndex == 1 {
+                //Web
+                strongSelf.webSource.webView.scrollView.isScrollEnabled = false
+                strongSelf.webSource.webView.scrollView.delegate = strongSelf
+            }
+            
             strongSelf.tableView.reloadData()
         }
     }
@@ -40,6 +47,79 @@ class FeudalismViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLayoutSubviews()
         
         tableView.frame = view.bounds
+    }
+    
+    //MARK: Scroll Delegate
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if decelerate == false {
+            scrollViewDidEndScroll(scrollView)
+        }
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        scrollViewDidEndScroll(scrollView)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if segmentView.selectedIndex == 0 {
+            return
+        }
+        
+        let webScrollView = webSource.webView.scrollView
+        
+        let anchor = NSTSegmentHeight + NSTHeaderHeight
+        let offset = scrollView.contentOffset.y
+        
+        if scrollView == tableView {
+            //outside
+            if offset > anchor {
+                tableView.setContentOffset(CGPoint(x: 0, y: anchor), animated: false)
+                webScrollView.setContentOffset(CGPoint(x: 0, y: webScrollView.contentOffset.y + offset - anchor), animated: false)
+            } else if offset < anchor {
+                webScrollView.setContentOffset(CGPoint.zero, animated: false)
+            }
+        } else {
+            //inside
+            if offset > 0 {
+                tableView.setContentOffset(CGPoint(x: 0, y: anchor), animated: false)
+            } else if offset < 0 {
+                tableView.setContentOffset(CGPoint(x: 0, y: tableView.contentOffset.y + offset), animated: false)
+                webScrollView.setContentOffset(CGPoint.zero, animated: false)
+            }
+        }
+    }
+    
+    func scrollViewDidEndScroll(_ scrollView: UIScrollView) {
+        if segmentView.selectedIndex == 0 {
+            return
+        }
+        
+        let webScrollView = webSource.webView.scrollView
+        
+        let anchor = NSTSegmentHeight + NSTHeaderHeight
+        let offset = scrollView.contentOffset.y
+        
+        var outsideScrollEnable = true
+        if scrollView == tableView {
+            if offset == anchor &&
+                webScrollView.contentOffset.y > 0 {
+                outsideScrollEnable = false
+            } else {
+                outsideScrollEnable = true
+            }
+        } else {
+            if offset == 0 &&
+                tableView.contentOffset.y < anchor {
+                outsideScrollEnable = true
+            } else {
+                outsideScrollEnable = false
+            }
+        }
+        
+        tableView.isScrollEnabled = outsideScrollEnable
+        tableView.showsHorizontalScrollIndicator = outsideScrollEnable
+        webScrollView.isScrollEnabled = !outsideScrollEnable
+        webScrollView.showsHorizontalScrollIndicator = !outsideScrollEnable
     }
     
     //MARK: Table DataSource
@@ -69,7 +149,7 @@ class FeudalismViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 1 {
-            return 44
+            return NSTSegmentHeight
         }
         return 0
     }
@@ -83,7 +163,7 @@ class FeudalismViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 200
+            return NSTHeaderHeight
         }
         
         if segmentView.selectedIndex == 0 {

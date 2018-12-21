@@ -50,11 +50,11 @@ class DespotismViewController: UIViewController, UIScrollViewDelegate {
         
         scrollView.frame = view.bounds
         
-        headLabel.frame = CGRect(x: 15, y: 0, width: scrollView.frame.size.width - 30, height: 200)
-        segmentView.frame = CGRect(x: 0, y: max(200, scrollView.contentOffset.y), width: scrollView.frame.size.width, height: 44)
+        headLabel.frame = CGRect(x: 15, y: 0, width: scrollView.frame.size.width - 30, height: NSTHeaderHeight)
+        segmentView.frame = CGRect(x: 0, y: max(NSTHeaderHeight, scrollView.contentOffset.y), width: scrollView.frame.size.width, height: NSTSegmentHeight)
         
         if currentScrollView != nil {
-            currentScrollView?.frame = CGRect(x: 0, y: segmentView.frame.maxY, width: scrollView.frame.size.width, height: view.bounds.size.height - 44)
+            currentScrollView?.frame = CGRect(x: 0, y: segmentView.frame.maxY, width: scrollView.frame.size.width, height: view.bounds.size.height - NSTSegmentHeight)
         }
     }
     
@@ -83,7 +83,7 @@ class DespotismViewController: UIViewController, UIScrollViewDelegate {
             }
             let closureScrollView = object as UIScrollView
             
-            strongSelf.scrollView.contentSize = CGSize(width: 0, height: 244 + closureScrollView.contentSize.height)
+            strongSelf.scrollView.contentSize = CGSize(width: 0, height: NSTHeaderHeight + NSTSegmentHeight + closureScrollView.contentSize.height)
         }
         
         typealias ClosureType = @convention(c) (AnyObject, Selector) -> AnyObject
@@ -99,7 +99,7 @@ class DespotismViewController: UIViewController, UIScrollViewDelegate {
         self.view.layoutIfNeeded()
         
         var floatOffset = scrollView.contentOffset
-        floatOffset.y -= 244
+        floatOffset.y -= (NSTHeaderHeight + NSTSegmentHeight)
         floatOffset.y = max(floatOffset.y, 0)
         
         if currentScrollView?.contentOffset.equalTo(floatOffset) == false {

@@ -39,10 +39,10 @@ class ColonialismViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        var frame = CGRect(x: 15, y: -244, width: view.bounds.size.width - 30, height: 200)
+        var frame = CGRect(x: 15, y: -(NSTSegmentHeight + NSTHeaderHeight), width: view.bounds.size.width - 30, height: NSTHeaderHeight)
         headLabel.frame = frame
         
-        frame = CGRect(x: 0, y: segmentView.frame.origin.y, width: view.bounds.size.width, height: 44)
+        frame = CGRect(x: 0, y: segmentView.frame.origin.y, width: view.bounds.size.width, height: NSTSegmentHeight)
         segmentView.frame = frame
         
         if currentScrollView != nil {
@@ -67,7 +67,7 @@ class ColonialismViewController: UIViewController {
             observer = nil
         }
         
-        scrollView.contentInset = UIEdgeInsetsMake(244, 0, 0, 0)
+        scrollView.contentInset = UIEdgeInsets(top: NSTSegmentHeight + NSTHeaderHeight, left: 0, bottom: 0, right: 0)
         scrollView.addSubview(headLabel)
         scrollView.addSubview(segmentView)
         view.addSubview(scrollView)
@@ -81,8 +81,8 @@ class ColonialismViewController: UIViewController {
             var segmentFrame = strongSelf.segmentView.frame
             let safeOffsetY = closureScrollView.contentOffset.y + closureScrollView.safeAreaInsets.top
             
-            if safeOffsetY < -44 {
-                segmentFrame.origin.y = -44
+            if safeOffsetY < -NSTSegmentHeight {
+                segmentFrame.origin.y = -NSTSegmentHeight
             } else {
                 segmentFrame.origin.y = safeOffsetY
             }

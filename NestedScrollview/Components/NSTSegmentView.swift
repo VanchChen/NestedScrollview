@@ -8,6 +8,9 @@
 
 import UIKit
 
+let NSTHeaderHeight = 200 as CGFloat;
+let NSTSegmentHeight = CGFloat(44);
+
 class NSTSegmentView: UIView {
     var selectedIndex : Int {
         get {
