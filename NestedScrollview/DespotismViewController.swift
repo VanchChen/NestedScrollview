@@ -29,6 +29,9 @@ class DespotismViewController: UIViewController, UIScrollViewDelegate {
         self.title = "中央集权"
         
         scrollView.delegate = self
+        if #available(iOS 11.0, *) {
+            scrollView.contentInsetAdjustmentBehavior = .never;
+        }
         view.addSubview(scrollView)
         
         headLabel.text = "I worship Despotism."

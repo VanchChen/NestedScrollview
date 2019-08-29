@@ -20,6 +20,9 @@ class NSTTableViewController : NSObject, UITableViewDataSource, UITableViewDeleg
         tableView.dataSource = self
         tableView.estimatedSectionFooterHeight = 0;
         tableView.estimatedSectionHeaderHeight = 0;
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = .never;
+        }
     }
 
     //MARK: Table DataSource

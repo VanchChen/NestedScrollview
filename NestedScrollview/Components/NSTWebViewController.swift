@@ -12,6 +12,9 @@ class NSTWebViewController: NSObject, UITableViewDataSource, UITableViewDelegate
     let webView = UIWebView()
     
     override init() {
+        if #available(iOS 11.0, *) {
+            webView.scrollView.contentInsetAdjustmentBehavior = .never;
+        }
         webView.frame = UIScreen.main.bounds
         webView.loadRequest(URLRequest(url: URL(string: "https://wap.baidu.com")!))
     }

@@ -8,6 +8,8 @@
 
 import UIKit
 
+let SafeZone = 0.5 as CGFloat
+
 class FeudalismViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let tableView = UITableView()
     let segmentView = NSTSegmentView()
@@ -21,12 +23,18 @@ class FeudalismViewController: UIViewController, UITableViewDelegate, UITableVie
 
         self.title = "分而治之"
         
-        tableView.estimatedRowHeight = 0;
-        tableView.estimatedSectionFooterHeight = 0;
-        tableView.estimatedSectionHeaderHeight = 0;
+        tableView.estimatedRowHeight = 0
+        tableView.estimatedSectionFooterHeight = 0
+        tableView.estimatedSectionHeaderHeight = 0
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = .never;
+        }
         tableView.delegate = self
         tableView.dataSource = self
         view.addSubview(tableView)
+        
+        //disable VerticalScrollIndicator
+        webSource.webView.scrollView.delegate = self
         
         segmentView.segmentDidTap = { [weak self] (segmentView) in
             guard let strongSelf = self else {
@@ -34,12 +42,19 @@ class FeudalismViewController: UIViewController, UITableViewDelegate, UITableVie
             }
             
             if segmentView.selectedIndex == 1 {
-                //Web
+                //Web set frame
+                strongSelf.webSource.webView.frame = CGRect(x: 0, y: 0, width: strongSelf.tableView.bounds.size.width, height: strongSelf.tableView.bounds.size.height - NSTSegmentHeight);
                 strongSelf.webSource.webView.scrollView.isScrollEnabled = false
-                strongSelf.webSource.webView.scrollView.delegate = strongSelf
             }
             
             strongSelf.tableView.reloadData()
+            
+            if segmentView.selectedIndex == 0 {
+                strongSelf.tableView.isScrollEnabled = true;
+                strongSelf.tableView.showsVerticalScrollIndicator = true
+            } else {
+                strongSelf.scrollViewDidEndScroll(strongSelf.tableView);
+            }
         }
     }
 
@@ -67,24 +82,34 @@ class FeudalismViewController: UIViewController, UITableViewDelegate, UITableVie
         
         let webScrollView = webSource.webView.scrollView
         
-        let anchor = NSTSegmentHeight + NSTHeaderHeight
+        let anchor = NSTHeaderHeight
         let offset = scrollView.contentOffset.y
         
         if scrollView == tableView {
             //outside
-            if offset > anchor {
-                tableView.setContentOffset(CGPoint(x: 0, y: anchor), animated: false)
-                webScrollView.setContentOffset(CGPoint(x: 0, y: webScrollView.contentOffset.y + offset - anchor), animated: false)
-            } else if offset < anchor {
-                webScrollView.setContentOffset(CGPoint.zero, animated: false)
+            if abs(offset - anchor) > SafeZone {
+                //double compare strategy
+                if offset > anchor {
+                    tableView.setContentOffset(CGPoint(x: 0, y: anchor), animated: false)
+                    webScrollView.setContentOffset(CGPoint(x: 0, y: webScrollView.contentOffset.y + offset - anchor), animated: false)
+                } else if offset < anchor {
+                    webScrollView.setContentOffset(CGPoint.zero, animated: false)
+                }
             }
         } else {
             //inside
-            if offset > 0 {
-                tableView.setContentOffset(CGPoint(x: 0, y: anchor), animated: false)
-            } else if offset < 0 {
-                tableView.setContentOffset(CGPoint(x: 0, y: tableView.contentOffset.y + offset), animated: false)
-                webScrollView.setContentOffset(CGPoint.zero, animated: false)
+            if abs(offset) > SafeZone {
+                //double compare strategy
+                if offset > 0 {
+                    // keep offset in zone
+                    let scrollOffset = min(tableView.contentOffset.y + offset, anchor)
+                    tableView.setContentOffset(CGPoint(x: 0, y: scrollOffset), animated: false)
+                } else if offset < 0 {
+                    // keep offset in zone
+                    let scrollOffset = max(tableView.contentOffset.y + offset, 0)
+                    tableView.setContentOffset(CGPoint(x: 0, y: scrollOffset), animated: false)
+                    webScrollView.setContentOffset(CGPoint.zero, animated: false)
+                }
             }
         }
     }
@@ -96,19 +121,19 @@ class FeudalismViewController: UIViewController, UITableViewDelegate, UITableVie
         
         let webScrollView = webSource.webView.scrollView
         
-        let anchor = NSTSegmentHeight + NSTHeaderHeight
+        let anchor = NSTHeaderHeight
         let offset = scrollView.contentOffset.y
         
         var outsideScrollEnable = true
         if scrollView == tableView {
-            if offset == anchor &&
+            if abs(offset - anchor) < SafeZone &&
                 webScrollView.contentOffset.y > 0 {
                 outsideScrollEnable = false
             } else {
                 outsideScrollEnable = true
             }
         } else {
-            if offset == 0 &&
+            if abs(offset) < SafeZone &&
                 tableView.contentOffset.y < anchor {
                 outsideScrollEnable = true
             } else {
@@ -117,9 +142,9 @@ class FeudalismViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         
         tableView.isScrollEnabled = outsideScrollEnable
-        tableView.showsHorizontalScrollIndicator = outsideScrollEnable
+        tableView.showsVerticalScrollIndicator = outsideScrollEnable
         webScrollView.isScrollEnabled = !outsideScrollEnable
-        webScrollView.showsHorizontalScrollIndicator = !outsideScrollEnable
+        webScrollView.showsVerticalScrollIndicator = !outsideScrollEnable
     }
     
     //MARK: Table DataSource
